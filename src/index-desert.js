@@ -196,8 +196,8 @@ function getDPI(){
     return 1;
   }
 }
-window.addEventListener('resize',updateSize);
-function updateSize(){
+// window.addEventListener('resize',updateSize);
+function start(){
   let container=document.querySelector('.background');
   let dimensions=container.getBoundingClientRect();
   haze.width=dimensions.width;
@@ -207,4 +207,7 @@ function updateSize(){
   haze.gl.createUniform('2f','resolution',haze.width*haze.dpi,haze.height*haze.dpi);
   updateContent();
 }
-updateSize();
+window.webyarns_dessert = {
+  start: start
+}
+// updateSize();
