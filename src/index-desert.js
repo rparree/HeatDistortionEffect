@@ -6,13 +6,13 @@ let canvas = () => document.querySelector('.background__canvas');
 let textureAlign={x:0.9,y:0.9};
 let textures=[
   {
-    file:'img/desert.jpg',
+    file:'img/yes2.png',
     name:'image',
     align:textureAlign,
     scale:{x:1,y:1}
   },
   {
-    file:'img/desert-maps.jpg',
+    file:'img/yes2.png',
     name:'maps',
     align:textureAlign,
     scale:{x:0.8,y:0.8},
@@ -124,7 +124,7 @@ let getContent = function () {
 
 function updateContent() {
   let content = getContent();
-  // if(content.loaded){
+   if(content.loaded){
   let title = content.canvas;
   let bb = title.getBoundingClientRect();
   haze.gl.createUniform(
@@ -134,7 +134,7 @@ function updateContent() {
           (content.scroll !== 0 ? document.body.scrollTop * content.scroll : 0)
       ) * haze.dpi
   );
-  //}
+  }
 }
 
 let haze // lazy
@@ -188,9 +188,10 @@ function getDPI() {
 }
 
 window.addEventListener('resize', updateSize);
-let active = false
+let active = false;
 
 function updateSize(){
+  if (!active) return
   let container=document.querySelector('.background');
   let dimensions=container.getBoundingClientRect();
   haze.width=dimensions.width;
