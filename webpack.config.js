@@ -2,9 +2,6 @@ var path=require('path');
 module.exports={
   context: __dirname + path.sep + "src",
   entry: {
-    cooking:"."+path.sep+"index-cooking",
-    flight:"."+path.sep+"index-flight",
-    water:"."+path.sep+"index-water",
     desert:"."+path.sep+"index-desert"
   },
   output:{
