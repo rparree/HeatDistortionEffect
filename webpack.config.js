@@ -9,6 +9,7 @@ module.exports={
     path:__dirname+path.sep+"build"
   },
   devtool:"source-map",
+  mode:"production",
   module: {
     rules: [
       {
