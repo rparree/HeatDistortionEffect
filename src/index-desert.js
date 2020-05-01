@@ -236,21 +236,21 @@ function defineCanvasStructure(containerId) {
   const container = document.getElementById(containerId);
   if (container.childElementCount === 0) {
 
-    const bg = document.createElement("background__canvas")
-    bg.setAttribute("class", "background")
+    const bg = document.createElement("div")
+    bg.setAttribute("class", "background shimmer")
 
     const bgc = document.createElement("canvas")
-    bgc.setAttribute("class", "background__canvas")
+    bgc.setAttribute("class", "background__canvas shimmer")
 
 
     const bgtb = document.createElement("canvas")
-    bgtb.setAttribute("class", "background__title background__title--big")
+    bgtb.setAttribute("class", "background__title background__title--big shimmer")
 
     const bgtm = document.createElement("canvas")
-    bgtm.setAttribute("class", "background__title background__title--medium")
+    bgtm.setAttribute("class", "background__title background__title--medium shimmer")
 
     const bgts = document.createElement("canvas")
-    bgts.setAttribute("class", "background__title background__title--small")
+    bgts.setAttribute("class", "background__title background__title--small shimmer")
 
     bg.appendChild(bgc)
     bg.appendChild(bgtb)
@@ -264,4 +264,5 @@ window.webyarns_dessert = {
   start,
   stop
 }
+
 
