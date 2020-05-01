@@ -8,7 +8,7 @@ module.exports={
     filename:"[name].js",
     path:__dirname+path.sep+"build"
   },
-  devtool:"source-map",
+  // devtool:"source-map",
   mode:"production",
   module: {
     rules: [
